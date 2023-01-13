@@ -88,8 +88,8 @@ class SwiftyBeaverTests: XCTestCase {
 
         log.dispatch_send(level: .warning, message: "Message", thread: "Thread", file: "File", function: "Function()", line: 123, context: "Context")
 
-        XCTAssertEqual(dest1.shouldLogToLevel, SwiftyBeaver.Level.warning)
-        XCTAssertEqual(dest2.shouldLogToLevel, SwiftyBeaver.Level.warning)
+        XCTAssertEqual(dest1.shouldLogToLevel, SwiftyBeaverClass.Level.warning)
+        XCTAssertEqual(dest2.shouldLogToLevel, SwiftyBeaverClass.Level.warning)
 
         XCTAssertEqual(dest1.shouldLogPath, "File")
         XCTAssertEqual(dest2.shouldLogPath, "File")
@@ -114,8 +114,8 @@ class SwiftyBeaverTests: XCTestCase {
 
         log.dispatch_send(level: .warning, message: "Message", thread: "Thread", file: "File", function: "Function()", line: 123, context: "Context")
 
-        XCTAssertEqual(dest1.didSendToLevel, SwiftyBeaver.Level.warning)
-        XCTAssertEqual(dest2.didSendToLevel, SwiftyBeaver.Level.warning)
+        XCTAssertEqual(dest1.didSendToLevel, SwiftyBeaverClass.Level.warning)
+        XCTAssertEqual(dest2.didSendToLevel, SwiftyBeaverClass.Level.warning)
 
         XCTAssertEqual(dest1.didSendMessage, "Message")
         XCTAssertEqual(dest2.didSendMessage, "Message")
@@ -155,7 +155,7 @@ class SwiftyBeaverTests: XCTestCase {
         XCTAssertTrue(log.addDestination(console2))
         XCTAssertEqual(log.countDestinations(), 2)
         console2.format = "$L: $M"
-        console2.minLevel = SwiftyBeaver.Level.debug
+        console2.minLevel = SwiftyBeaverClass.Level.debug
         log.verbose("a verbose hello from hopefully just 1 console!")
         log.debug("a debug hello from 2 different consoles!")
 
@@ -172,7 +172,7 @@ class SwiftyBeaverTests: XCTestCase {
         let file2 = FileDestination()
         file2.logFileURL = URL(string: "file:///tmp/testSwiftyBeaver2.log")!
         console2.format = "$L: $M"
-        file2.minLevel = SwiftyBeaver.Level.debug
+        file2.minLevel = SwiftyBeaverClass.Level.debug
         XCTAssertTrue(log.addDestination(file2))
         XCTAssertEqual(log.countDestinations(), 4)
         log.verbose("this should be in file 1")
@@ -348,7 +348,7 @@ class SwiftyBeaverTests: XCTestCase {
 }
 
 private class MockDestination: BaseDestination {
-    var didSendToLevel: SwiftyBeaver.Level?
+    var didSendToLevel: SwiftyBeaverClass.Level?
     var didSendMessage: String?
     var didSendToThread: String?
     var didSendFile: String?
@@ -356,7 +356,7 @@ private class MockDestination: BaseDestination {
     var didSendLine: Int?
     var didSendContext: (Any?)?
 
-    override func send(_ level: SwiftyBeaver.Level, msg: String, thread: String, file: String, function: String, line: Int, context: Any?) -> String? {
+    override func send(_ level: SwiftyBeaverClass.Level, msg: String, thread: String, file: String, function: String, line: Int, context: Any?) -> String? {
         didSendToLevel = level
         didSendMessage = msg
         didSendToThread = thread
@@ -368,11 +368,11 @@ private class MockDestination: BaseDestination {
         return ""
     }
 
-    var shouldLogToLevel: SwiftyBeaver.Level?
+    var shouldLogToLevel: SwiftyBeaverClass.Level?
     var shouldLogPath: String?
     var shouldLogFunction: String?
     var shouldLogMessage: String?
-    override func shouldLevelBeLogged(_ level: SwiftyBeaver.Level, path: String, function: String, message: String?) -> Bool {
+    override func shouldLevelBeLogged(_ level: SwiftyBeaverClass.Level, path: String, function: String, message: String?) -> Bool {
         shouldLogToLevel = level
         shouldLogPath = path
         shouldLogFunction = function

@@ -83,15 +83,15 @@ class SBPlatformDestinationTests: XCTestCase {
     }
 
     func testSendingPointsFromLevel() {
-        var points = platform.sendingPointsForLevel(SwiftyBeaver.Level.verbose)
+        var points = platform.sendingPointsForLevel(SwiftyBeaverClass.Level.verbose)
         XCTAssertEqual(points, platform.sendingPoints.verbose)
-        points = platform.sendingPointsForLevel(SwiftyBeaver.Level.debug)
+        points = platform.sendingPointsForLevel(SwiftyBeaverClass.Level.debug)
         XCTAssertEqual(points, platform.sendingPoints.debug)
-        points = platform.sendingPointsForLevel(SwiftyBeaver.Level.info)
+        points = platform.sendingPointsForLevel(SwiftyBeaverClass.Level.info)
         XCTAssertEqual(points, platform.sendingPoints.info)
-        points = platform.sendingPointsForLevel(SwiftyBeaver.Level.warning)
+        points = platform.sendingPointsForLevel(SwiftyBeaverClass.Level.warning)
         XCTAssertEqual(points, platform.sendingPoints.warning)
-        points = platform.sendingPointsForLevel(SwiftyBeaver.Level.error)
+        points = platform.sendingPointsForLevel(SwiftyBeaverClass.Level.error)
         XCTAssertEqual(points, platform.sendingPoints.error)
     }
 
