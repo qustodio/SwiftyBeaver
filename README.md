@@ -145,7 +145,7 @@ Create a `Logger.swift` file anywhere in your project, and add the following lin
 
 ```swift
 let log: SwiftyBeaver.Type = {
-    let log = SwiftyBeaver.self
+    let log = SwiftyBeaverClass.self
     
     // add log destinations. at least one is needed!
     let console = ConsoleDestination()  // log to Xcode Console
@@ -159,7 +159,7 @@ Here you can add other log destinations (file, cloud, etc.), optionally adjust t
 
 ```swift
 let log: SwiftyBeaver.Type = {
-    let log = SwiftyBeaver.self
+    let log = SwiftyBeaverClass.self
     
     // add log destinations. at least one is needed!
     let console = ConsoleDestination()  // log to Xcode Console

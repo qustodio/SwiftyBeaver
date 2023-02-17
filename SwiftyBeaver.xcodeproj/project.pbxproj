@@ -31,7 +31,7 @@
 		OBJ_52 /* FilterValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* FilterValidator.swift */; };
 		OBJ_53 /* GoogleCloudDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* GoogleCloudDestination.swift */; };
 		OBJ_54 /* SBPlatformDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* SBPlatformDestination.swift */; };
-		OBJ_55 /* SwiftyBeaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* SwiftyBeaver.swift */; };
+		OBJ_55 /* SwiftyBeaverClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* SwiftyBeaverClass.swift */; };
 		OBJ_62 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_73 /* AES256CBCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* AES256CBCTests.swift */; };
 		OBJ_74 /* BaseDestinationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* BaseDestinationTests.swift */; };
@@ -72,7 +72,7 @@
 		OBJ_15 /* FilterValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterValidator.swift; sourceTree = "<group>"; };
 		OBJ_16 /* GoogleCloudDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleCloudDestination.swift; sourceTree = "<group>"; };
 		OBJ_17 /* SBPlatformDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBPlatformDestination.swift; sourceTree = "<group>"; };
-		OBJ_18 /* SwiftyBeaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyBeaver.swift; sourceTree = "<group>"; };
+		OBJ_18 /* SwiftyBeaverClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftyBeaverClass.swift; sourceTree = "<group>"; };
 		OBJ_21 /* AES256CBCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AES256CBCTests.swift; sourceTree = "<group>"; };
 		OBJ_22 /* BaseDestinationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDestinationTests.swift; sourceTree = "<group>"; };
 		OBJ_23 /* ConsoleDestinationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleDestinationTests.swift; sourceTree = "<group>"; };
@@ -179,7 +179,7 @@
 				OBJ_15 /* FilterValidator.swift */,
 				OBJ_16 /* GoogleCloudDestination.swift */,
 				OBJ_17 /* SBPlatformDestination.swift */,
-				OBJ_18 /* SwiftyBeaver.swift */,
+				OBJ_18 /* SwiftyBeaverClass.swift */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -278,7 +278,7 @@
 				OBJ_52 /* FilterValidator.swift in Sources */,
 				OBJ_53 /* GoogleCloudDestination.swift in Sources */,
 				OBJ_54 /* SBPlatformDestination.swift in Sources */,
-				OBJ_55 /* SwiftyBeaver.swift in Sources */,
+				OBJ_55 /* SwiftyBeaverClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

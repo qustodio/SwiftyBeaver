@@ -16,7 +16,7 @@ class ConsoleDestinationTests: XCTestCase {
 
     override func setUp() {
         super.setUp()
-        SwiftyBeaver.removeAllDestinations()
+        SwiftyBeaverClass.removeAllDestinations()
     }
 
     override func tearDown() {
@@ -24,7 +24,7 @@ class ConsoleDestinationTests: XCTestCase {
     }
 
     func testUseTerminalColors() {
-        let log = SwiftyBeaver.self
+        let log = SwiftyBeaverClass.self
         let console = ConsoleDestination()
         XCTAssertTrue(log.addDestination(console))
 

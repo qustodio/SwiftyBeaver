@@ -1,5 +1,5 @@
 //
-//  SwiftyBeaver.swift
+//  SwiftyBeaverClass.swift
 //  SwiftyBeaver
 //
 //  Created by Sebastian Kreutzberger (Twitter @skreutzb) on 28.11.15.
@@ -9,7 +9,7 @@
 
 import Foundation
 
-open class SwiftyBeaver {
+open class SwiftyBeaverClass {
 
     /// version string of framework
     public static let version = "1.9.6"  // UPDATE ON RELEASE!
@@ -130,7 +130,7 @@ open class SwiftyBeaver {
     }
 
     /// custom logging to manually adjust values, should just be used by other frameworks
-    open class func custom(level: SwiftyBeaver.Level, message: @autoclosure () -> Any,
+    open class func custom(level: SwiftyBeaverClass.Level, message: @autoclosure () -> Any,
                              file: String = #file, function: String = #function, line: Int = #line, context: Any? = nil) {
         #if swift(>=5)
         dispatch_send(level: level, message: message(), thread: threadName(),
@@ -142,7 +142,7 @@ open class SwiftyBeaver {
     }
 
     /// internal helper which dispatches send to dedicated queue if minLevel is ok
-    class func dispatch_send(level: SwiftyBeaver.Level, message: @autoclosure () -> Any,
+    class func dispatch_send(level: SwiftyBeaverClass.Level, message: @autoclosure () -> Any,
         thread: String, file: String, function: String, line: Int, context: Any?) {
         var resolvedMessage: String?
         for dest in destinations {
